@@ -24,11 +24,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
     map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-    map('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-    map('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
-    map('<leader>wl', function()
-      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, '[W]orkspace [L]ist Folders')
   end,
 })
 
@@ -109,6 +104,7 @@ local servers = {
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
