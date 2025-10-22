@@ -7,9 +7,12 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = 1 }) end,
-  { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1 }) end, { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '[d', function()
+  vim.diagnostic.jump { count = 1 }
+end, { desc = 'Go to previous diagnostic message' })
+vim.keymap.set('n', ']d', function()
+  vim.diagnostic.jump { count = 1 }
+end, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
@@ -74,8 +77,7 @@ vim.keymap.set('n', 'ML', '<C-w>L')
 vim.keymap.set('n', 'MM', '<C-w>_')
 
 -- Replace text in buffer
-vim.keymap.set('n', '<leader>rs', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-  { desc = 'Replace text in buffer' })
+vim.keymap.set('n', '<leader>rs', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace text in buffer' })
 
 -- Quickfix list
 vim.keymap.set('n', ']t', ':cn<CR>')
@@ -101,8 +103,5 @@ end)
 
 -- React specific keymaps
 vim.keymap.set('n', '<leader>ir', "iimport * as React from 'react'<Esc>", { desc = 'Import react snippet' })
-vim.keymap.set('n', '<leader>wf', 'i{return }<Esc>x%p%a<CR><CR><Esc>kO',
-  { desc = 'Wrap function return statement into body block' })
-vim.keymap.set('n', '<leader>l', "viwy}Oconsole.log('<Esc>pa:', <Esc>pa)<Esc>",
-  { desc = 'Create a console.log for the text under the cursor' })
-
+vim.keymap.set('n', '<leader>wf', 'i{return }<Esc>x%p%a<CR><CR><Esc>kO', { desc = 'Wrap function return statement into body block' })
+vim.keymap.set('n', '<leader>l', "viwy}Oconsole.log('<Esc>pa:', <Esc>pa)<Esc>", { desc = 'Create a console.log for the text under the cursor' })
