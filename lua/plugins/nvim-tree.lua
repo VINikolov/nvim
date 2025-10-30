@@ -9,6 +9,15 @@ return {
 
     config = function()
       require('nvim-tree').setup {
+
+        -- Remove bookmark mapping from nvim-tree keymaps
+        on_attach = function(bufnr)
+          local api = require 'nvim-tree.api'
+          api.config.mappings.default_on_attach(bufnr)
+
+          vim.keymap.del('n', 'm', { buffer = bufnr })
+        end,
+
         sort = {
           sorter = 'case_sensitive',
         },
