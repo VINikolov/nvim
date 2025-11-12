@@ -17,7 +17,7 @@ return {
       },
 
       mapping = cmp.mapping.preset.insert {
-        ['<C-S-Space>'] = cmp.mapping.complete(),
+        ['<C-Space>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm { select = true },
       },
 
