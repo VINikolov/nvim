@@ -8,6 +8,10 @@ vim.wo.relativenumber = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+vim.o.showmode = false
+
+vim.o.swapfile = false
+
 -- Sync clipboard between OS and Neovim.
 vim.o.clipboard = 'unnamedplus'
 
