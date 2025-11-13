@@ -28,7 +28,7 @@ vim.o.scrolloff = 10
 
 -- Setup lazy.nvim
 require('lazy').setup {
-  performance = { rtp = { disabled_plugins = {} } }, -- Run :Lazy profile after start for profiling dependency load speed
+  -- performance = { rtp = { disabled_plugins = {} } }, -- Run :Lazy profile after start for profiling dependency load speed
   spec = {
     -- import your plugins
     { import = 'plugins' },
