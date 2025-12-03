@@ -7,7 +7,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', function()
-  vim.diagnostic.jump { count = 1 }
+  vim.diagnostic.jump { count = -1 }
 end, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', function()
   vim.diagnostic.jump { count = 1 }
