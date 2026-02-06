@@ -15,8 +15,12 @@ vim.o.swapfile = false
 -- Sync clipboard between OS and Neovim.
 vim.o.clipboard = 'unnamedplus'
 
--- Enable break indent
+-- Indentation
 vim.o.breakindent = true
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
 
 -- Save undo history
 vim.o.undofile = true

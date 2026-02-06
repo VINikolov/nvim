@@ -13,7 +13,7 @@ return {
 
     return {
       completion = {
-        completeopt = 'menu,menuone,noinsert,noselect',
+        completeopt = 'menu,menuone,noinsert',
       },
 
       mapping = cmp.mapping.preset.insert {
