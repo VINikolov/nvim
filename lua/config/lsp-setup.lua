@@ -1,5 +1,3 @@
-vim.lsp.enable 'lua_ls'
-
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
     local map = function(keys, func, desc, mode)
