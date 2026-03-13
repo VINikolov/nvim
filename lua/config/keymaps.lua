@@ -85,7 +85,7 @@ vim.keymap.set('n', '<leader>tt', function()
   term_open_job_id = vim.bo.channel
 end, { desc = 'Open [T]erminal' })
 
-vim.keymap.set('n', '<leader>tr', function()
+vim.keymap.set('n', '<leader>te', function()
   vim.fn.chansend(term_open_job_id, { 'exec zsh\r\n' })
 end)
 

@@ -7,6 +7,11 @@ return {
     require('catppuccin').setup {
       integrations = {
         harpoon = true,
+        neotest = true,
+        diffview = true,
+        mason = true,
+        cmp = true,
+        telescope = true,
       },
     }
 
