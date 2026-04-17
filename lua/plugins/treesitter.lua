@@ -2,27 +2,23 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
+    branch = 'main',
     event = { 'BufReadPost', 'BufNewFile' },
 
-    config = function()
-      local config = require 'nvim-treesitter.configs'
-      config.setup {
-        auto_install = true,
+    opts = {
+      ensure_installed = {
+        'bash',
+        'html',
+        'css',
+        'scss',
+        'javascript',
+        'typescript',
+        'json',
+        'lua',
+      },
 
-        ensure_installed = {
-          'bash',
-          'html',
-          'css',
-          'scss',
-          'javascript',
-          'typescript',
-          'json',
-          'lua',
-        },
-
-        highlight = { enable = true },
-        indent = { enable = false },
-      }
-    end,
+      highlight = { enable = true },
+      indent = { enable = false },
+    },
   },
 }
