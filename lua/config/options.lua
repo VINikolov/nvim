@@ -39,7 +39,6 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
 -- Terminal setup
@@ -54,3 +53,6 @@ vim.api.nvim_create_autocmd('TermOpen', {
 })
 
 vim.cmd 'tnoremap <Esc> <C-\\><C-n>'
+
+-- Nvim ui2
+require('vim._core.ui2').enable()

@@ -5,20 +5,20 @@ return {
   opts = {
     notify_on_error = true,
     formatters_by_ft = {
-      javascript = { 'prettierd' },
-      typescript = { 'prettierd' },
-      javascriptreact = { 'prettierd' },
-      typescriptreact = { 'prettierd' },
-      css = { 'prettierd' },
-      html = { 'prettierd' },
-      json = { 'prettierd' },
+      javascript = { 'biome' },
+      typescript = { 'biome' },
+      javascriptreact = { 'biome' },
+      typescriptreact = { 'biome' },
+      css = { 'biome' },
+      html = { 'biome' },
+      json = { 'biome' },
       lua = { 'stylua' },
       python = { 'black' },
       cs = { 'csharpier' },
     },
 
     format_on_save = {
-      lsp_fallback = true,
+      lsp_fallback = false,
       async = false,
       timeout_ms = 1000,
     },

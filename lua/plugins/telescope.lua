@@ -6,8 +6,10 @@ return {
 
   config = function()
     require('telescope').setup {
-      extensions = {
-        fzf = {},
+      pickers = {
+        find_files = {
+          sorter = require('telescope.sorters').get_fuzzy_file(),
+        },
       },
     }
 
