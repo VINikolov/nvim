@@ -74,21 +74,6 @@ vim.keymap.set('n', '[t', ':cp<CR>')
 -- File formatting
 vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, { desc = 'Format file' })
 
--- Terminal
-local term_open_job_id = 0
-vim.keymap.set('n', '<leader>tt', function()
-  vim.cmd.vnew()
-  vim.cmd.term()
-  vim.cmd.wincmd 'J'
-  vim.api.nvim_win_set_height(0, 30)
-
-  term_open_job_id = vim.bo.channel
-end, { desc = 'Open [T]erminal' })
-
-vim.keymap.set('n', '<leader>te', function()
-  vim.fn.chansend(term_open_job_id, { 'exec zsh\r\n' })
-end)
-
 -- React specific keymaps
 vim.keymap.set('n', '<leader>ir', "iimport * as React from 'react'<Esc>", { desc = 'Import react snippet' })
 vim.keymap.set('n', '<leader>wf', 'i{return }<Esc>x%p%a<CR><CR><Esc>kO', { desc = 'Wrap function return statement into body block' })
