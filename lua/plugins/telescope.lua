@@ -1,14 +1,28 @@
 return {
   'nvim-telescope/telescope.nvim',
-  event = 'VimEnter',
+  -- event = 'VimEnter',
 
   dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' } },
 
   config = function()
-    require('telescope').setup {
+    local telescope = require 'telescope'
+
+    pcall(telescope.load_extension, 'fzf')
+
+    telescope.setup {
+      defaults = {
+        file_ignore_patterns = {
+          'node_modules/.*',
+          '%.git/.*',
+          '%.DS_Store',
+          'dist/.*',
+          '%.lock',
+        },
+      },
+
       pickers = {
         find_files = {
-          sorter = require('telescope.sorters').get_fuzzy_file(),
+          hidden = true,
         },
       },
     }
