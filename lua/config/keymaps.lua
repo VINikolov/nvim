@@ -13,7 +13,7 @@ vim.keymap.set('n', ']d', function()
   vim.diagnostic.jump { count = 1 }
 end, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Custom remaps
 -- vim.keymap.set('v', '<leader>p', "\"_dP")
@@ -70,6 +70,7 @@ vim.keymap.set('n', '<leader>rs', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 -- Quickfix list
 vim.keymap.set('n', ']t', ':cn<CR>')
 vim.keymap.set('n', '[t', ':cp<CR>')
+vim.keymap.set('n', '<leader>q', ':cclose<CR>')
 
 -- File formatting
 vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, { desc = 'Format file' })
