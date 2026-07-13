@@ -19,7 +19,9 @@ return {
   config = function()
     require('neotest').setup {
       adapters = {
-        require 'neotest-vitest',
+        require 'neotest-vitest' {
+          vitestCommand = 'npx vitest',
+        },
       },
     }
   end,

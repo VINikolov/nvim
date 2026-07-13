@@ -3,6 +3,14 @@ return {
   name = 'catppuccin',
   priority = 1000,
 
+  opts = {
+    custom_highlights = function()
+      return {
+        SnippetTabstopActive = {},
+      }
+    end,
+  },
+
   config = function()
     require('catppuccin').setup {
       integrations = {
