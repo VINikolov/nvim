@@ -19,7 +19,15 @@ return {
     completion = {
       accept = { auto_brackets = { enabled = false } },
       ghost_text = { enabled = false },
-      documentation = { auto_show = true },
+      documentation = {
+        window = {
+          border = 'rounded',
+        },
+        auto_show = true,
+      },
+      menu = {
+        border = 'rounded',
+      },
     },
 
     fuzzy = { implementation = 'prefer_rust_with_warning' },

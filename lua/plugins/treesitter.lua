@@ -3,9 +3,10 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     branch = 'main',
+    lazy = false,
 
-    opts = {
-      ensure_installed = {
+    config = function()
+      require('nvim-treesitter').install {
         'bash',
         'html',
         'css',
@@ -14,10 +15,7 @@ return {
         'typescript',
         'json',
         'lua',
-      },
-
-      highlight = { enable = true },
-      indent = { enable = false },
-    },
+      }
+    end,
   },
 }

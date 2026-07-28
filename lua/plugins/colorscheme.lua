@@ -18,7 +18,7 @@ return {
         neotest = true,
         diffview = true,
         mason = true,
-        cmp = true,
+        blink_cmp = true,
         telescope = true,
       },
     }
