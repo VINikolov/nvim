@@ -15,6 +15,7 @@ return {
       lua = { 'stylua' },
       python = { 'black' },
       cs = { 'csharpier' },
+      go = { 'gofumpt', 'goimports' },
     },
 
     format_on_save = {
