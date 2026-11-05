@@ -15,6 +15,9 @@ return {
         'typescript',
         'json',
         'lua',
+				'tsx',
+				'markdown',
+				'yaml',
       }
     end,
   },
